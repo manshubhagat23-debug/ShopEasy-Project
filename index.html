@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+        font-family: sans-serif;
+        overflow-x: hidden;
+    }
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        box-shadow: 0 0 5px;
+    }
+
+    .search {
+        width: 40%;
+        position: relative;
+    }
+
+    .search input {
+        width: 70%;
+        padding: 8px;
+        padding-left: 40px;
+        border: 0;
+        box-shadow: 0 0 2px;
+        border-radius: 3px;
+    }
+
+    .search input:focus {
+        outline: 1px solid rgb(7, 188, 233);
+    }
+
+    .search i {
+        position: absolute;
+        top: 8px;
+        left: 10px;
+        color: rgb(0, 102, 255);
+    }
+
+    .header-top {
+        background-color: rgb(34, 152, 199);
+        color: white;
+        display: flex;
+        gap: 10px;
+        justify-content: space-evenly;
+        padding: 10px;
+    }
+
+    .header-bottom {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .header-bottom>ul {
+        display: flex;
+        list-style-type: none;
+        gap: 100px;
+    }
+
+    .hero {
+        background-image: url('./wordrobe.jpg');
+        width: 100vw;
+        height: 50vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top: 0;
+    }
+
+    .hero>h1 {
+        color: white;
+        text-align: center;
+        padding-top: 150px;
+    }
+
+    .hero>h5 {
+        color: white;
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    .line {
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .container {
+        text-align: center;
+        display: flex;
+    }
+
+    .card {
+        padding: 5px;
+        height: 300px;
+        margin: 10px 20px;
+        display: inline-block;
+        width: 300px;
+        background-color: rgb(133, 114, 91);
+    }
+
+    .card-body {
+        padding: 10px 20px;
+    }
+
+    .img img {
+        height: 160px;
+        width: 160px;
+        position: relative;
+    }
+
+    .img>div {
+        height: 0%;
+        width: 100%;
+        background-color: white;
+        position: absolute;
+        bottom: 0;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        background-image: linear-gradient(to bottom, black, rgb(41, 41, 97));
+        color: white;
+    }
+
+    .footertopcontainer {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .middlecontainer{
+        width: 100%;
+        border-bottom: 2px solid white;
+        height: 2px;
+    }
+    .bottomcontainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footercontent{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .fa-instagram, .fa-youtube, .fa-whatsapp, .fa-facebook, .fa-linkedin, .fa-twitter{
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 20px;
+    }
+    .fa-instagram{
+        background-image: linear-gradient(to bottom, blue,rgb(255,69,99), yellow,rgb(255,68,99),rgb(255,68,90));
+    }
+    .fa-facebook{
+        background-color: blue;
+    }
+    .fa-twitter{
+        background-color: rgb(0,102,255);
+    }
+    .fa-whatsapp{
+        background-color: green;
+    }
+    .fa-youtube{
+        background-color: red;
+    }
+    .fa-linkedin{
+        background-color: rgb(0,102,255);
+    }
+    .app button{
+        background-color: rgb(230, 111, 0);
+        color: white;
+
+    }
+
+</style>
+
+<body>
+    <header>
+        <div class="header-top">
+            <div class="brand">
+                <i class="fa fa-shopping-bag">ShopEasy</i>
+            </div>
+            <div class="search">
+                <input type="search" placeholder="Search product">
+            </div>
+            <div class="Account">
+                <i class="fa fa-user">Account</i>
+            </div>
+            <div class="cart">
+                <i class="fa fa-shopping-cart">Cart</i>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <ul>
+                <li>Home</li>
+                <li>Mobiles</li>
+                <li>Laptops</li>
+                <li>Fashion</li>
+                <li>Electronics</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+    </header>
+    <section class="hero">
+        <h1>Big Deals, Best Prices</h1>
+        <h5> Shop your favourite product today!</h5>
+
+    </section>
+    <div class="line">
+        <i class="fa fa-firefox">Popular Products</i>
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="img">
+                <img src="./smartphone.webp" alt="">
+                <div></div>
+            </div>
+            <div class="card-body">
+                <h2>Smartphone</h2>
+                <i class="fa fa-star" style="color: rgb(255, 169, 10);"></i>4.3
+                <p>₹30,000</p>
+                <h2>18% OFF</h2>
+                <button>Add to cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img">
+                <img src="./lap.webp" alt="">
+                <div></div>
+            </div>
+            <div class="card-body">
+                <h2>Laptop</h2>
+                <i class="fa fa-star" style="color: rgb(255, 169, 10);"></i>4.3
+                <p>₹75,000</p>
+                <h2>18% OFF</h2>
+                <button>Add to cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img">
+                <img src="./headphone.webp" alt="">
+                <div></div>
+            </div>
+            <div class="card-body">
+                <h2>Headphone</h2>
+                <i class="fa fa-star" style="color: rgb(255, 169, 10);"></i>4.3
+                <p>₹50,000</p>
+                <h2>18% OFF</h2>
+                <button>Add to cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img">
+                <img src="./smartwatch.webp" alt="">
+                <div></div>
+            </div>
+            <div class="card-body">
+                <h2>Smartwatch</h2>
+                <i class="fa fa-star" style="color: rgb(255, 169, 10);"></i>4.3
+                <p>₹2,000</p>
+                <h2>18% OFF</h2>
+                <button>Add to cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img">
+                <img src="./glasses.webp" alt="">
+                <div></div>
+            </div>
+            <div class="card-body">
+                <h2>Sunglasses</h2>
+                <i class="fa fa-star" style="color: rgb(255, 169, 10);"></i>4.3
+                <p>₹3,500</p>
+                <h2>18% OFF</h2>
+                <button>Add to cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img">
+                <img src="./keyboard.webp" alt="">
+                <div></div>
+            </div>
+            <div class="card-body">
+                <h2>Keyboard</h2>
+                <i class="fa fa-star" style="color: rgb(255, 169, 10);"></i>4.3
+                <p>₹25,000</p>
+                <h2>18% OFF</h2>
+                <button>Add to cart</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footertopcontainer">
+            <div class="in footercontent">
+                <h3>Programs</h3>
+                <ul>
+                    <p>Corporate</p>
+                    <p>One to One</p>
+                    <p>Consulting</p>
+                </ul>
+            </div>
+            <div class="out footercontent">
+                <h3>Service</h3>
+                <ul>
+                    <p>Training</p>
+                    <p>coaching</p>
+                    <p>Consulting</p>
+                </ul>
+            </div>
+            <div class="footercontent">
+                <h3>Contact</h3>
+                <ul>
+                    <p>Home</p>
+                    <p>About</p>
+                    <p>Contact</p>
+                </ul>
+            </div>
+            <div class="app">
+                <h2>Newssletter</h2>
+                <input type="text">
+                <button>Subscribe</button>
+                <br><br>
+                <i class="fa fa-whatsapp"></i>
+                <i class="fa fa-youtube"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-linkedin"></i>
+                <i class="fa fa-twitter"></i>
+                <p>Mobile:+917892474250</p>
+                <p>Email:mannu@ShopEasy.com</p>
+
+            </div>
+        </div>
+        <div class="middlecontainer">
+        </div>
+        <div class="bottomcontainer">
+            <h1>Shopeasy</h1>
+            <i class="fa fa-phone">Connects</i>
+        </div>
+
+
+
+    </footer>
